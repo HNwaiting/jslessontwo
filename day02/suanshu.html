@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>suansu</title>
+</head>
+<body>
+<script>
+    var i = 1234;
+    var q = parseInt(i / 1000);  // 1
+    var b = parseInt(i % 1000 / 100);  // 2
+    var s = parseInt(i % 100 / 10); //  3
+    var g = i % 10;   // 4
+    console.log(q, b, s, g);  //1 2 3 4
+
+
+    i = 1;
+    console.log(i++);  // 1
+    console.log(++i); // 3
+    console.log(i); // 3
+    console.log(i--); // 3 (输出3 ，实际为2）
+    console.log(--i); // 1（2-1 ，输出1）
+</script>
+</body>
+</html>
