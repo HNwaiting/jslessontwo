@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>star</title>
+</head>
+<body>
+<script>
+    //////////////金币玩游戏////////////////////////
+    //   var i=0;
+    //        for( var count=parseFloat(prompt("请问您要买多少币"));
+    //             count>=3;
+    //             count = count -3)
+    //        {
+    //            i++;
+    //            alert("可以玩"+i+"次");
+    //        }
+    //    document.write("剩余"+count+"个币");
+
+    ////////////////////输出正三角////////////////
+ /*   function zheng(ln) {
+        //   var str = "";
+        for (var i = 1; i <= ln; i++) {  //控制输出几行
+            for (var o = 1, str = ""; o <= i; o++) {
+                str += "*";
+            }
+            // document.write(str);
+            console.log(str);
+        }
+    }
+
+    zheng(4);*/
+
+    /////////////////////输出倒三角/////////////////////////
+/*    function dao(ln) {
+        //反复调用每一行
+        for (var r = 1; r <= ln; r++) {
+            //第一步：打印第r行
+            for (var i = 1, str = ""; i <= ln; i++) {
+                str += i < r ? "" : "*";
+            }
+            console.log(str);
+        }
+    }
+    dao(4);*/
+    /////////////////////输出反三角/////////////////////////
+    function fan(ln){
+        //反复调用每一行
+        for (var x = ln; x >=1; x--) {
+            //第一步：打印第r行
+            for (var i = ln, str = ""; i >=1; i--) {
+                str += i < x ? "" : "*";
+            }
+            console.log(str);
+        }
+    }
+    fan(5);
+</script>
+</body>
+</html>
+
+
+
+
