@@ -17,6 +17,16 @@
     console.log(arr3);
     console.log(arr3[1]);
     console.log(arr2);
+    //关联数组
+    var grate=[];
+    grate["name"]="waiting";
+    grate["math"]="90";
+    grate["english"]="100";
+    console.log(grate["name"]);
+    for(var key in grate){  //循环遍历数组下标名称
+        console.log(grate[key]);
+        console.log(key + ":" + grate[key]); //输出key : value;
+    }
 </script>
 </body>
 </html>
