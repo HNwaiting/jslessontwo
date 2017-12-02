@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>splice</title>
+</head>
+<body>
+<script>
+    var arr1=[1,2,3,4,5,6];
+    var arr2=arr1.splice(2); //定义接收数组 接收数字下标为2以后的数组值
+    console.log(arr2)   //3,4,5,6 arr1被删除的数组值
+    console.log(arr1);//结果为删除后剩余的数组值
+    var arr3=[7,8,9,10,11,12];
+    var arr4=arr3.splice(2,3);
+    console.log(arr4) // 9,10,11
+    console.log(arr3);  // 7,8,12
+
+    var arr5=[13,14,15,16,17];
+    arr6 = arr5.splice(2,3,18,19,20)  //删除15,16,17；插入18,19,20
+    console.log(arr5)  //13,14,18,19,20
+    console.log(arr6) //  15,16,17 arr5中被删除的值
+</script>
+</body>
+</html>
