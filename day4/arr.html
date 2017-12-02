@@ -17,6 +17,7 @@
     console.log(arr3);
     console.log(arr3[1]);
     console.log(arr2);
+
     //关联数组
     var grate=[];
     grate["name"]="waiting";
@@ -28,6 +29,33 @@
         console.log(key + ":" + grate[key]); //输出key : value;
     }
 
+    //二维数组 看作关于一维数组的一维数组
+
+    var arr =[  // 3*3
+        [1,2,3],
+        [true,false,true],
+        ['a','b','c']
+    ];
+    console.log(arr[0][0]);
+    console.log(arr[arr.length-1][arr[arr.length-1].length-1])
+                /*length-1位数组长度，即行数*//*最后一样的最后一列*/
+
+    var arr2 =[
+        [1,2,3],          //***
+        [true,false],    //**
+        ['a']            //*
+    ];
+    console.log(arr2[0][0]);
+    console.log(arr2[arr2.length-1][arr2[arr2.length-1].length-1])
+    /*length-1位数组长度，即行数*//*最后一样的最后一列*/
+
+    //循环输出二维数组
+    for(var x=0;x<arr.length;x++){
+        for (var y=0 ; y<arr[x].length;y++){
+           document.write(arr[x][y] + '&nbsp');
+        }
+        document.write("<br>")
+    }
 </script>
 </body>
 </html>
