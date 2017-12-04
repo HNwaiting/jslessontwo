@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>math</title>
+</head>
+<body>
+<script>
+    //专门封装算数计算的常量和函数的对象 不能new。,所有API都通过大写Math直接调用
+    //取整方式：三种  1.上取整Math.ceil(num)
+    Math.ceil(345.1) //346
+
+    //2.下取整 Math.floor(num)
+    Math.floor(345.9) //345
+    //3. 四舍五入取整 Math.round(num)
+    Math.round(345.6) //346
+
+    //自定义四舍五入
+    function round(num,d) {
+        //n*10 的 d
+        //将n四舍五入
+        //n/10的 d 次方
+        //返回n
+        num*= Math.pow(10,d)// num = num.Math.pow(10,d);
+        num = Math.round(num);
+       num/= Math.pow(10,d);
+       return num;
+    }
+    console.log(round(345.678,2));
+
+    //乘方和开平方
+//    Math.pow(d,m);//底数，幂
+
+    //min,max 不支持数组。
+    //Math.max.apply支持数组  Math.max.apply(null,arr);
+
+    //随机数  在任意min和max之间去一个随机整数
+    //parseInt(Math.random()*(max-min+1)+min);
+
+    //双色球机选号码
+
+
+</script>
+</body>
+</html>

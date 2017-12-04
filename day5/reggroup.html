@@ -9,9 +9,24 @@
     var p1=/[a-e]/g; //a-e g全局匹配  i-case（不区分大小写） ignore m-multiple line
     console.log('apple'.match(p1)); //返回匹配上的值
 
-    var p2=/[A-z]g/; //ascii码表中的A-z，其中包含几个!@#$%特殊字符
+    var p2=/[A-z]/g; //ascii码表中的A-z，其中包含几个[\]^-、特殊字符
     console.log('apple!@#$%'.match(p2)); //返回匹配上的值
     // \w:数字字母下划线 \W 非数字字母下划线
+
+    //查找匹配
+    var str = "明明喜欢我，却不告诉我。别理我，我想静静。静静是谁？你先告诉我明明是谁！";
+    var reg=/明明|静静/g;
+    while (true){
+        var arr = reg.exec(str);
+        if (arr != null){
+
+            console.log("在位置"+ arr["index"]
+            + "发现敏感词"+ arr[0]+",下次从" +reg.lastIndex+"开始");  //arr[0:关键词，“index”：下标]
+        }
+        else
+            break;
+    }
+
 
 </script>
 </body>
