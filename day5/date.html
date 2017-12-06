@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>date</title>
+</head>
+<body>
+<script>
+    //创建时间
+    var date=new Date();
+    document.write(date);
+
+    //Date对象保存的是毫秒数
+    date.getTime();//毫秒数. 不受时区影响
+ //   var date1 = new Date(ms); //毫秒转化成时间
+
+
+ //   var date2=new Date(yyyy/MM/dd);  自定义日期格式
+ //   document.write(date2);
+
+
+    //复制一个日期对象  同事希望保存计算前后的两个时间
+    var date3 = new Date(date);
+    document.write(date3);
+
+    //日期对象相减  结果为毫秒差
+    var birth = new Date("1995/03/31");
+    var now = new Date();
+    var days = (now - birth)/1000/3600/24;
+    document.write(days);
+</script>
+</body>
+</html>
